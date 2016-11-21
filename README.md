@@ -20,6 +20,7 @@ import NumberPickerDialog from 'react-native-numberpicker-dialog';
 
 NumberPickerDialog.show({
   values: ['First item', 'Second item', 'Third item'],
+  selectedValueIndex: 1, // have second-item selected
   positiveButtonLabel: 'Ok',
   negativeButtonLabel: 'Cancel',
   message: 'What would you like to have?',
