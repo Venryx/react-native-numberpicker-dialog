@@ -53,6 +53,9 @@ class RNNumberPickerDialogModule extends ReactContextBaseJavaModule {
         picker.setDisplayedValues(displayedValues);
         picker.setWrapSelectorWheel(false);
         picker.setDescendantFocusability(NumberPicker.FOCUS_BLOCK_DESCENDANTS);
+        
+        if (options.hasKey("selectedValueIndex"))
+			picker.setValue(options.getInt("selectedValueIndex"));
 
         new AlertDialog.Builder(getCurrentActivity())
             .setTitle(options.getString("title"))
